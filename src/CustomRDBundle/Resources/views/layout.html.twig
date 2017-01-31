@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+	Elemental by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>Elemental by Pixelarity</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {# <!--[if lte IE 8]><script src="{{ asset('js/ie/html5shiv.js') }}"></script><![endif]-->#}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+    {#<!--[if lte IE 9]><link rel="stylesheet" href="{{ asset('css/ie9.css') }}" /><![endif]-->#}
+    {#<!--[if lte IE 8]><link rel="stylesheet" href="{{ asset('css/ie8.css') }}" /><![endif]-->#}
+</head>
+<body>
+
+<!-- Header -->
+<div id="header" class="alt">
+    <a class="logo" href="index.html"><strong>Elemental</strong> by Pixelarity</a>
+    <nav id="nav">
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="#">Link One</a></li>
+                    <li><a href="#">Link Two</a></li>
+                    <li><a href="#">Link Three</a></li>
+                    <li>
+                        <a href="#">Submenu</a>
+                        <ul>
+                            <li><a href="#">Link One</a></li>
+                            <li><a href="#">Link Two</a></li>
+                            <li><a href="#">Link Three</a></li>
+                            <li><a href="#">Link Four</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link Five</a></li>
+                </ul>
+            </li>
+            <li><a href="generic.html">Generic</a></li>
+            <li><a href="elements.html">Elements</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+{% block body %}{% endblock %}
+
+
+<!-- Footer -->
+<div id="footer">
+    <h2>Get in touch</h2>
+    <p>Praesent dapibus, neque id cursus faucibus, tortor neque ege tas augue, eu vulputate magna eros eu erat. Aliquam erat et volutpat. Nam dui mi, tincidunt quis, accumsan porttitor tempus lorem ipsum dolor sit amet consequat.</p>
+    <ul class="major-icons">
+        <li>
+            <h3 class="icon fa-phone major"><span class="label">Phone</span></h3>
+            <p>(000) 000-0000</p>
+        </li>
+        <li>
+            <h3 class="icon fa-map major"><span class="label">Address</span></h3>
+            <p>1234 Fictional Road<br />
+                Nashville, TN 00000</p>
+        </li>
+        <li>
+            <h3 class="icon fa-envelope major"><span class="label">Email</span></h3>
+            <p><a href="#">info@untitled.tld</a></p>
+        </li>
+    </ul>
+    <ul class="joined-icons">
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+    </ul>
+    <p class="copyright">&copy; Untitled. All rights reserved. Lorem ipsum dolor sit amet.</p>
+</div>
+
+<!-- Scripts -->
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery.dropotron.min.js') }}"></script>
+<script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ asset('js/skel.min.js') }}"></script>
+<script src="{{ asset('js/util.js') }}"></script>
+{#<!--[if lte IE 8]><script src="{{ asset('js/ie/respond.min.js') }}"></script><![endif]-->#}
+<script src="{{ asset('js/main.js') }}"></script>
+
+</body>
+</html>
