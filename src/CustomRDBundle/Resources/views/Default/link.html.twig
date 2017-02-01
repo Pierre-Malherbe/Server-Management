@@ -14,6 +14,9 @@
     <section class="banner">
         <h2>BIENVENUE<br />
             sur le custom RD des heros</h2>
+        <ul class="actions">
+            <li><a href="#" class="button">Learn More</a></li>
+        </ul>
     </section>
 
     <!-- One -->
@@ -21,11 +24,17 @@
         <div class="content">
             <div class="inner">
                 <h2>Authentication</h2>
-                {#<form method="post" action="#">#}
                 {{ form_start(form, {'method': 'POST'}) }}
+                <div class="row uniform">
+                    <div class="12u$">
+                        <label for="demo-name">Lien</label>
+                        {{ form_widget(form.link) }}
+                        {#<input type="text" name="demo-name" id="demo-name" value="" />#}
+                    </div>
+                </div>
                 <ul class="actions">
                     {#<li><a href="#" class="button">Validate</a></li>#}
-                    {{ form_widget(form.debrid) }}
+                    {{ form_widget(form.validate) }}
                 </ul>
                 {{ form_end(form) }}
             </div>

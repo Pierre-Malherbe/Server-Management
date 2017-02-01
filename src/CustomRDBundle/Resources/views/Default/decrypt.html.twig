@@ -20,14 +20,13 @@
     <section id="one" class="wrapper spotlight">
         <div class="content">
             <div class="inner">
-                <h2>Authentication</h2>
+                <h2>Lien</h2>
                 {#<form method="post" action="#">#}
-                {{ form_start(form, {'method': 'POST'}) }}
+                <p>Lien débridé :</p>
+                <a href="{{ link.download }}">{{ link.download }}</a>
                 <ul class="actions">
                     {#<li><a href="#" class="button">Validate</a></li>#}
-                    {{ form_widget(form.debrid) }}
                 </ul>
-                {{ form_end(form) }}
             </div>
         </div>
         <ul class="grid-icons">
