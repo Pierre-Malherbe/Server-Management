@@ -23,9 +23,16 @@
                 <h2>Authentication</h2>
                 {#<form method="post" action="#">#}
                 {{ form_start(form, {'method': 'POST'}) }}
+                    <div class="row uniform">
+                        <div class="12u$">
+                            <label for="demo-name">Token</label>
+                            {{ form_widget(form.token) }}
+                            {#<input type="text" name="demo-name" id="demo-name" value="" />#}
+                        </div>
+                    </div>
                 <ul class="actions">
                     {#<li><a href="#" class="button">Validate</a></li>#}
-                    {{ form_widget(form.debrid) }}
+                    {{ form_widget(form.validate) }}
                 </ul>
                 {{ form_end(form) }}
             </div>
