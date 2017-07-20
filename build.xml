@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Composer Targets" >
 
-    <property name="builddir" value="${project.basedir}/build"/>
+    <property name="builddir" value="build"/>
     <property name="composer" value="${builddir}/composer.phar"/>
 
     <target name="php-check">
