@@ -4,8 +4,8 @@ namespace CustomRDBundle\Controller;
 
 use RealDebrid\Auth\Token;
 use RealDebrid\RealDebrid;
+use Unirest;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -106,5 +106,19 @@ class DefaultController extends Controller
         return $this->render('CustomRDBundle:Default:link.html.twig', array(
             'form' => $form->createView()
         ));
+    }
+
+    private function getToken(){
+        $redirectUrl = "https%3A%2F%2Fpanel.office-web.fr%2Fdebrid%2Flink";
+        $clientId = "Test";
+        $responseType = "code";
+        $state = "Verification";
+
+        $headers = array('Accept' => 'application/json');
+        $query = array('client_id' => $clientId, 'redirect_uri' => $redirectUrl, 'response_type' => $responseType, 'state' => $state);
+
+        $response = Unirest\Request::get('https://api.real-debrid.com/oauth/v2/auth',$headers,$query);
+
+        dump($response->body);
     }
 }
